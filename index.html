@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested IF Statement</title>
+</head>
+
+<body>
+    <h1>Nested IF Statement</h1>
+    <form onsubmit="conditionCheck(); return false">
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" placeholder="example@email.com">
+        <br>
+        <br>
+        <label for="password">Enter password:</label>
+        <input type="password" required id="password" placeholder="**********">
+        <br>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function conditionCheck() {
+
+            let dbEmail = "abc@abc.com"
+            let dbPassword = "1234"
+            let email = document.querySelector("#email").value;
+            let password = document.querySelector("#password").value;
+            if (email === dbEmail) {
+                if (password === dbPassword) {
+                    document.querySelector("#result").innerHTML = "Login Successful.";
+                } else {
+                    document.querySelector("#result").innerHTML = "Invalid password.";
+                }
+            }
+            else {
+                document.querySelector("#result").innerHTML = "Account doesn't Exist.";
+            }
+        }
+    </script>
+</body>
+
+</html>
