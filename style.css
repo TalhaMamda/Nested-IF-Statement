@@ -5,6 +5,7 @@ body {
 .h1 {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 h1 {
@@ -26,9 +27,17 @@ h1 {
 }
 .body{
     margin-left: 10px;
+    font-size: large;
+    color: rgb(182, 44, 60);
 }
-
+input,label{
+    font-size: large;
+}
+#email{
+    margin-left: 29px;
+}
 button {
+    color: rgb(0, 0, 0);
     padding: 5px 30px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
